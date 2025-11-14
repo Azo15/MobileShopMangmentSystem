@@ -1,21 +1,14 @@
-Bu proje, Java’da Polymorphism (Çok Biçimlilik) kavramını göstermek için yapılmıştır.
 
-Yapı
+## Bu proje, Java’da **Polymorphism (Çok Biçimlilik)** kavramını göstermek için hazırlanmıştır.
 
-Mobil → Üst sınıf, ortak özellikler ve calcMobilePrice() metodu.
+## Sınıflar
+- **Mobil**: Üst sınıf, ortak özellikler ve `calcMobilePrice()` metodu içerir.
+- **Android**: `calcMobilePrice()` metodunu override ederek %10 indirim uygular.
+- **Ios**: `calcMobilePrice()` metodunu override ederek %5 indirim uygular.
+- **Harmony**: `calcMobilePrice()` metodunu override ederek %15 indirim uygular.
 
-Android → %10 indirim
-
-Ios → %5 indirim
-
-Harmony → %15 indirim
-Alt sınıflar calcMobilePrice() metodunu override eder.
-
-Çalışma Mantığı
-
-Her alt sınıf kendi indirim oranını uygular.
-Örnek:
-
+## Örnek Kullanım
+```java
 Android s = new Android("Samsung", "J7", 3600);
 Ios i = new Ios("Iphone", "11 PRO", 3600);
 Harmony h = new Harmony("Redmi", "Note 8", 3600);
@@ -23,8 +16,7 @@ Harmony h = new Harmony("Redmi", "Note 8", 3600);
 System.out.println(s.calcMobilePrice()); // 3240
 System.out.println(i.calcMobilePrice()); // 3420
 System.out.println(h.calcMobilePrice()); // 3060
+```
 
-Amaç
-
-Aynı metodun (calcMobilePrice)
-farklı sınıflarda farklı davranmasını göstermek.
+## Amaç
+Aynı metodun (`calcMobilePrice`) farklı sınıflarda **farklı sonuç üretmesi** ile polymorphism mantığını göstermek.
